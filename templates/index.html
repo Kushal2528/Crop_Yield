@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Green</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        body {
+    background-color: #66fa27;
+    text-align: center;
+   /* background-image: url('https://cdn.dnaindia.com/sites/default/files/styles/full/public/2016/12/26/532501-wheat-863392960720.jpg'); */
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background-color: #8bbde8;
+}
+.navbar-header{
+    
+}
+
+a {
+    color: #c73f0a;
+}
+
+a:hover {
+    color: #0e536e;
+  }
+ 
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <a2 class="navbar-brand" href="/">Project Green © 2022</a2>
+                 
+        <br>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+
+    <div class="container">
+<a2>Please fill the parameters below and click on Predict button to check prediction of crop production.</a2>
+
+
+        <form action="\predict" method="post">
+       
+           <h3>Soil Type</h3><select name="Soil_Type" id="first" required="required">
+                <option name="soil_type=chalky" value="soil_type=chalky">chalky</option>
+                <option name="soil_type=loamy" value="soil_type=loamy">loamy</option>
+                <option value="soil_type=peaty">peaty</option>
+                <option value="soil_type=sandy">sandy</option>
+                <option value="soil_type=silt">silt</option>
+                <option value="soil_type=silty">silty</option>
+            </select>
+        <br>
+        <br>
+            <h3>Area</h3><input id="second" name="area" required="required">
+        <br>  
+        <br>  
+            <h3>Crop Name</h3><select name="Crop_Name" id="third" required="required">
+                <option value="Arhar/Tur">Arhar/Tur</option>
+                <option value="Bajra">Bajra</option>
+                <option value="Banana">Banana</option>
+                <option value="Castor seed">Castor seed</option>
+                <option value="Cotton(lint)">Cotton(lint)</option>
+                <option value="Gram">Gram</option>
+                <option value="Grapes">Grapes</option>
+                <option value="Groundnut">Groundnut</option>
+                <option value="Jowar">Jowar</option>
+                <option value="Linseed">Linseed</option>
+                <option value="Mango">Mango</option>
+                <option value="Moong(Green Gram)">Moong(Green Gram)</option>
+                <option value="Niger seed">Niger seed</option>
+                <option value="Onion">Onion</option>
+                <option value="Other Rabi pulse">Other Rabi pulse</option>
+                <option value="Other Cereals & Millets">Other Cereals & Millets</option>
+                <option value="Other Kharif pulses">Other Kharif pulses</option>
+                <option value="Pulses total">Pulses total</option>
+                <option value="Ragi">Ragi</option>
+                <option value="Rapeseed &Mustard">Rapeseed &Mustard</option>
+                <option value="Rice">Rice</option>
+                <option value="Safflower">Safflower</option>
+                <option value="Sesamum">Sesamum</option>
+                <option value="Small millets">Small millets</option>
+                <option value="Soyabean">Soyabean</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Sunflower">Sunflower</option>
+                <option value="Tobacco">Tobacco</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Total foodgrain">Total foodgrain</option>
+                <option value="Urad">Urad</option>
+                <option value="Wheat">Wheat</option>
+                <option value="other oilseeds">other oilseeds</option>
+               
+            </select>
+        <br>
+        <br>
+            <h3>Temperature</h3><input id="fourth" name="temperature" placeholder="In degree celsius like 21.28" required="required">
+        <br>
+        <br>   
+            
+            <h3>Wind Speed</h3><input id="fifth" name="wind_speed" placeholder="Like 2.0967" required="required">
+        <br>
+        <br>
+            <h3>Nitrogent Content</h3><input id="sixth" name="N" placeholder="Like 8.740" required="required">
+        <br>
+        <br>
+            <h3>Crop Year</h3><select name="crop_year" id="seventh" required="required">
+                <option value="1997">1997</option>
+                <option value="1997">1998</option>
+                <option value="1997">1999</option>
+                <option value="1997">2000</option>
+                <option value="1997">2001</option>
+                <option value="1997">2002</option>
+                <option value="1997">2003</option>
+                <option value="1997">2004</option>
+                <option value="1997">2005</option>
+                <option value="1997">2006</option>
+                <option value="1997">2007</option>
+                <option value="1997">2008</option>
+                <option value="1997">2009</option>
+                <option value="1997">2010</option>
+                <option value="1997">2011</option>
+                <option value="1997">2012</option>
+                <option value="1997">2013</option>
+                <option value="1997">2014</option>
+                
+                
+            </select>
+            
+            <br>
+            
+            <br>
+            <h3>Humidity</h3><input id="eighth" name="humidity" placeholder="Like 21.3797" required="required">
+            
+            <br>
+            <h3>Pressure</h3><input id="ninth" name="pressure" placeholder="Like 1013.59" required="required">
+            <br><button id="sub" type="submit ">Predict</button>
+        </form>
+        <h3>{{ prediction_text }}<h3>
+        <br>
+    </div>
+        
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+
+   <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/sadique43"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/sadique43"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>© Sadique Akhtar 2022</p>
+       </div>
+
+
+</body>
+
+</html>
