@@ -13,7 +13,7 @@ crop_names = ['Maize', 'Arhar/Tur', 'Bajra', 'Gram', 'Jowar', 'Moong(Green Gram)
 
 soil_types = ['loamy', 'sandy', 'clay', 'chalky', 'peaty', 'silty', 'silt']
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def Home():
     return render_template('index2.html',
                            crop_years=crop_years,
@@ -39,10 +39,7 @@ def predict():
 
         input_=[crop_year, pressure, wind_speed, temperature] + get_district_name(district_name) + get_crop_name(crop_name) + get_soil_type(soil_type)  
         output=list(model.predict([input_]))
-        return render_template('index2.html', prediction_text="Crop Yield will be {} per hectare 👨‍🌾".format(output[0]),                           crop_years=crop_years,
-                               district_names=district_names,
-                               soil_types=soil_types,
-                               crop_names=crop_names)
+        return render_template('index2.html', prediction_text="Crop Yield will be {} per hectare 👨‍🌾".format(output[0]), crop_years=crop_years, district_names=district_names, soil_types=soil_types, crop_names=crop_names)
    
 
 if __name__ == "__main__":
