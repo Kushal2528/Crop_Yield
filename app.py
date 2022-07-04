@@ -14,7 +14,7 @@ def Home():
 standard_to = StandardScaler()
 
 
-@app.route("/predict", methods=['POST'])
+@app.route("/predict", methods=['GET', 'POST'])
 def predict():
     district_names_AHMEDNAGAR = 0
     temperature = 0
