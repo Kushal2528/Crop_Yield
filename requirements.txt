@@ -1,6 +1,0 @@
-Python==3.8.8
-Flask==1.1.2
-pickle==4.0
-sklearn-relief==1.0.0b2
-pandas==1.4.2
-numpy==1.20.1
