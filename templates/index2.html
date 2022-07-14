@@ -90,18 +90,34 @@
                     <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
+                
+                <h3>Season</h3>
+                <select class="select" name="season" required="required" placeholder="Enter the season">
+                    {% for o in season %}
+                    <option value="{{ o }}">{{ o }}</option>
+                    {% endfor %}
+                </select>
 
-                <h3>Soil Type</h3>
+            
+                
+               
+
+                <h3>Pressure</h3><input id="ninth" name="pressure" placeholder="Like 1013.59" required="required">
+                <h3>Wind Speed</h3><input id="ninth" name="wind" placeholder="Like 2.06826" required="required">
+                <h3>Temperature</h3><input id="ninth" name="temp" placeholder="Like 20.770894" required="required">
+                 
+                
+                    <h3>Soil Type</h3>
                 <select class="select" name="stype" required="required" placeholder="Enter the year for prediction">
                     {% for o in soil_types %}
                     <option value="{{ o }}">{{ o }}</option>
                     {% endfor %}
                 </select>
-
-                <h3>Pressure</h3><input id="ninth" name="pressure" placeholder="Like 1013.59" required="required">
-                <h3>Wind Speed</h3><input id="ninth" name="wind" placeholder="Like 2.06826" required="required">
-                <h3>Temperature</h3><input id="ninth" name="temp" placeholder="Like 20.770894" required="required">
-
+                
+                
+                <h3>N</h3><input id="ninth" name="N" required="required">
+                <h3>P</h3><input id="ninth" name="P" required="required">
+                <h3>K</h3><input id="ninth" name="K" required="required">
 
 
 
