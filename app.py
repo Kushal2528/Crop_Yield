@@ -13,13 +13,16 @@ crop_names = ['Maize', 'Arhar/Tur', 'Bajra', 'Gram', 'Jowar', 'Moong(Green Gram)
 
 soil_types = ['loamy', 'sandy', 'clay', 'chalky', 'peaty', 'silty', 'silt']
 
+season = ['Autumn', 'Winter', 'Kharf', 'Whole Year']
+
 @app.route('/', methods=['GET', 'POST'])
 def Home():
     return render_template('index2.html',
                            crop_years=crop_years,
                            district_names=district_names,
                            soil_types=soil_types,
-                           crop_names=crop_names)
+                           crop_names=crop_names
+                           season = season)
 
 
 standard_to = StandardScaler()
