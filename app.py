@@ -21,7 +21,7 @@ def Home():
                            crop_years=crop_years,
                            district_names=district_names,
                            soil_types=soil_types,
-                           crop_names=crop_names
+                           crop_names=crop_names,
                            season = season)
 
 
